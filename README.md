@@ -109,6 +109,10 @@ Action 是一个对象。其中的`type`属性是必须的，表示 Action 的�
         replaceReducer,
         [$$observable]: observable
     }
+### subscribe  设置监听函数，state发送变化立即执行函数
+### getState   拿到当前状态，获取redux当前的state
+### replaceReducer  替换当前reducer函数，接受一个新的reducer，替换完成以后初始化store的状态dispatch({ type: ActionTypes.INIT })
+### [$$observable]: observable  [redux内部使用](https://github.com/reduxjs/redux/blob/master/test/createStore.spec.js#L633)
 
 # combineReducers
 `combineReducers`方法，用于 `Reducer` 的拆分。你只要定义各个子 `Reducer` 函数，然后用这个方法，将它们合成一个大的 Reducer。
